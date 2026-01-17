@@ -1,0 +1,14 @@
+formatter: "markdown table"
+
+version: ">= 0.12"
+
+header-from: "main.tf"
+footer-from: "main.tf"
+
+output:
+  file: "README.md"
+  mode: inject
+  template: |-
+    <!-- BEGIN_TF_DOCS -->
+    {{ .Content }}
+    <!-- END_TF_DOCS -->
