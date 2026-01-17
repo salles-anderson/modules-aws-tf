@@ -46,13 +46,6 @@ Modules are organized by category. Click on the module name to view its detailed
 | [rds-mysql](modules/database/rds-mysql) | RDS MySQL instances |
 | [rds-postgres](modules/database/rds-postgres) | RDS PostgreSQL instances |
 
-### IAM
-
-| Module | Description |
-|--------|-------------|
-| [crossplane-role](modules/iam/crossplane-role) | IAM roles for Crossplane |
-| [k8s-node-role](modules/iam/k8s-node-role) | IAM roles for Kubernetes nodes |
-
 ### Networking
 
 | Module | Description |

@@ -12,7 +12,6 @@ The repository structure is as follows:
 │   ├── compute/             # Compute-related modules (EC2, ECS, EKS, etc.)
 │   ├── cost-optimization/   # Cost optimization modules (schedulers)
 │   ├── database/            # Database modules (RDS, DynamoDB, etc.)
-│   ├── iam/                 # IAM-specific modules (Roles, Policies)
 │   ├── networking/          # Networking modules (VPC, ALB, Route53, etc.)
 │   ├── observability/       # Observability modules (CloudWatch, etc.)
 │   ├── security/            # Security modules (SG, ACM, WAF, etc.)
