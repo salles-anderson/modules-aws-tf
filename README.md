@@ -5,6 +5,12 @@
 
 A collection of reusable, production-ready Terraform modules for AWS infrastructure provisioning. Designed to be modular, secure, and easy to use.
 
+## Architecture
+
+<div align="center">
+  <img src="docs/architecture-diagram.png" alt="Architecture Diagram" width="600"/>
+</div>
+
 ## Documentation
 
 - **[Architecture & Design](ARCHITECTURE.md)**: Design principles and repository structure
