@@ -1,0 +1,34 @@
+name: Create Tag on Commit
+
+# Este workflow roda a cada push na branch 'main'
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  create-tag:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Permissão para o job poder criar e enviar tags
+
+    steps:
+      # 1. Faz o checkout do código do repositório
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. Gera o nome da tag e a envia para o repositório
+      - name: Create and Push Tag
+        run: |
+          # Configura o Git com o nome e email do bot do GitHub Actions
+          git config user.name "GitHub Actions"
+          git config user.email "github-actions@github.com"
+
+          # Cria um nome de tag único usando data, hora e o hash curto do commit
+          TAG_NAME="v$(date -u +'%Y%m%d%H%M%S')-$(git rev-parse --short HEAD)"
+          
+          # Cria a tag localmente
+          git tag $TAG_NAME
+          
+          # Envia a nova tag para o repositório remoto
+          git push origin $TAG_NAME
