@@ -103,6 +103,12 @@ variable "load_balancers" {
   default     = []
 }
 
+variable "enable_circuit_breaker" {
+  description = "Habilita o deployment circuit breaker com rollback automatico."
+  type        = bool
+  default     = false
+}
+
 variable "tags" {
   description = "Um mapa de tags customizadas para adicionar aos recursos."
   type        = map(string)

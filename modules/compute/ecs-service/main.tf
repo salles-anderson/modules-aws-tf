@@ -42,6 +42,14 @@ resource "aws_ecs_service" "this" {
     assign_public_ip = var.assign_public_ip
   }
 
+  dynamic "deployment_circuit_breaker" {
+    for_each = var.enable_circuit_breaker ? [1] : []
+    content {
+      enable   = true
+      rollback = true
+    }
+  }
+
   dynamic "load_balancer" {
     for_each = var.load_balancers
     content {
